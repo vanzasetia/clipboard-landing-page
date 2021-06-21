@@ -8,10 +8,6 @@
   padding-top: rem(120);
   text-align: center;
   
-  &__content {
-    padding: rem(48) 0;
-  }
-  
   &__title {
     font-size: rem(30);
   }
@@ -22,23 +18,20 @@
   text-align: center;
   
   &__logo {
-    display: block;
-    margin: rem(60) auto;
-    width: rem(125);
+    margin: 0 auto;
   }
-  
-  &__logo:first-child {
-    margin-top: 0;
-  }
-  
-  &__logo:last-child {
-    margin-bottom: 0;
-  }
+}
+
+.companies .container {
+  display: grid;
+  justify-content: center;
+  gap: rem(60);
 }
 
 
 /// FOOTER ///
 .footer {
+  margin-top: rem(60);
   background-color: #F5F6F8;
   padding: rem(60) 0;
   text-align: center;

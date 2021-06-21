@@ -61,6 +61,10 @@ img {
   padding: 0 1.875rem;
 }
 
+.content-wrapper {
+  padding: 3rem 0;
+}
+
 .item {
   margin: 2.5rem 0;
 }
@@ -79,7 +83,8 @@ img {
   border-radius: 5em;
   cursor: pointer;
   padding: 0.875rem 0;
-  width: 18.75rem;
+  width: 100%;
+  max-width: 18.75rem;
   text-align: center;
   color: white;
   font-weight: 600;
@@ -116,9 +121,6 @@ img {
   padding-top: 7.5rem;
   text-align: center;
 }
-.header__content {
-  padding: 3rem 0;
-}
 .header__title {
   font-size: 1.875rem;
 }
@@ -127,18 +129,17 @@ img {
   text-align: center;
 }
 .companies__logo {
-  display: block;
-  margin: 3.75rem auto;
-  width: 7.8125rem;
+  margin: 0 auto;
 }
-.companies__logo:first-child {
-  margin-top: 0;
-}
-.companies__logo:last-child {
-  margin-bottom: 0;
+
+.companies .container {
+  display: grid;
+  justify-content: center;
+  gap: 3.75rem;
 }
 
 .footer {
+  margin-top: 3.75rem;
   background-color: #F5F6F8;
   padding: 3.75rem 0;
   text-align: center;
