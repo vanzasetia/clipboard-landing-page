@@ -1,0 +1,56 @@
+@use '../abstracts' as *;
+
+*, *::after, *::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+::selection {
+  background-color: $strong-cyan;
+  color: $white;
+}
+
+html {
+  font-size: $default-html-font-size;
+}
+
+body {
+  line-height: 1.6;
+  font-family: 'Bai Jamjuree', sans-serif;
+  font-size: rem(18);
+}
+
+.header,
+.section {
+  padding: rem(60) 0;
+  text-align: center;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: rem(12) 0;
+  line-height: 1.3;
+  color: $dark-grayish-blue;
+}
+
+p {
+  margin: rem(12) 0;
+  color: $grayish-blue;
+  font-size: rem(15.5);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: inline-block;
+  max-width: 100%;
+}

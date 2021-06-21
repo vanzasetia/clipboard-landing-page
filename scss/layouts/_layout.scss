@@ -1,0 +1,88 @@
+@use '../abstracts' as *;
+
+/// HEADER ///
+.header {
+  background-image: url('../images/bg-header-mobile.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  padding-top: rem(120);
+  text-align: center;
+  
+  &__content {
+    padding: rem(48) 0;
+  }
+  
+  &__title {
+    font-size: rem(30);
+  }
+}
+
+/// COMPANIES ///
+.companies {
+  text-align: center;
+  
+  &__logo {
+    display: block;
+    margin: rem(60) auto;
+    width: rem(125);
+  }
+  
+  &__logo:first-child {
+    margin-top: 0;
+  }
+  
+  &__logo:last-child {
+    margin-bottom: 0;
+  }
+}
+
+
+/// FOOTER ///
+.footer {
+  background-color: #F5F6F8;
+  padding: rem(60) 0;
+  text-align: center;
+  
+  &__logo {
+    margin-bottom: rem(20);
+    height: rem(60);
+    width: rem(60);
+  }
+  
+  &__item {
+    margin: rem(16) 0;
+  }
+  
+  &__link {
+    color: $dark-grayish-blue;
+    
+    @include on-event {
+      color: $strong-cyan;
+    }
+  }
+  
+  &__social {
+    margin-top: rem(40);
+  }
+}
+
+.social__item {
+  display: inline-block;
+  
+  &:nth-child(2) {
+    margin: 0 rem(30);
+  }
+}
+
+.social__item img {
+  
+  @include on-event {
+    filter: 
+      invert(53%) 
+      sepia(100%) 
+      saturate(306%) 
+      hue-rotate(122deg) 
+      brightness(93%) 
+      contrast(97%);
+  }
+}

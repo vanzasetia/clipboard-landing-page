@@ -1,0 +1,46 @@
+@use '../abstracts' as *;
+
+.btn {
+  display: inline-block;
+  margin: rem(10) 0;
+  border: none;
+  border-bottom: rem(3) solid;
+  border-radius: 5em;
+  cursor: pointer;
+  padding: rem(14) 0;
+  width: rem(300);
+  text-align: center;
+  color: $white;
+  font-weight: 600;
+  transition: all 250ms ease-in-out;
+  
+  &--ios {
+    border-bottom-color: shade($strong-cyan, 20%);
+    box-shadow: 0 rem(10) rem(20) rgba($strong-cyan, 0.25);
+    background-color: $strong-cyan;
+  }
+  
+  &--mac {
+    border-bottom-color: shade($light-blue, 20%);
+    box-shadow: 0 rem(10) rem(20) rgba($light-blue, 0.25);
+    background-color: $light-blue;
+  }
+  
+  @include on-event {
+    outline: none;
+  }
+}
+
+.btn--ios {
+  @include on-event {
+    border-bottom-color: $strong-cyan;
+    background-color: tint($strong-cyan, 20%);
+  }
+}
+
+.btn--mac {
+  @include on-event {
+    border-bottom-color: $light-blue;
+    background-color: tint($light-blue, 20%);
+  }
+}
