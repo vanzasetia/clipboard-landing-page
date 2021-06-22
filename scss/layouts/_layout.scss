@@ -47,10 +47,28 @@
 }
 
 /// WORKFLOW ///
+.workflow__list {
+  
+  @include breakpoint-up('large') {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+}
+
 .workflow__list .item__description {
   @include breakpoint-up('large') {
     margin: 0 auto;
   }
+}
+
+/* HACKING */
+/** 
+* 1. For an unknown reason, the first workflow child
+* does not have align correctly
+*/
+.workflow__item:first-child .item__icon {
+  margin: rem(25) 0; /* 1 */
 }
 
 /// COMPANIES ///
@@ -67,6 +85,16 @@
   display: grid;
   justify-content: center;
   gap: rem(60);
+  
+  @supports (grid-gap: rem(60)) {
+    grid-gap: rem(60);
+  }
+  
+  @supports not ((grid-gap: rem(60)) and (gap: rem(60))) {
+    & > *:not(:last-child) {
+      margin-bottom: rem(60);
+    }
+  }
 }
 
 

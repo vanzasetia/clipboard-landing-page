@@ -33,7 +33,11 @@
 
 /// ITEM ///
 .item {
-  margin: rem(40) 0;
+  padding: rem(40) 0;
+  
+  @include breakpoint-up('large') {
+    padding: rem(40);
+  }
   
   &__title {
     font-size: rem(22);

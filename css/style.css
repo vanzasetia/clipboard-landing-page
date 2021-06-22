@@ -81,7 +81,12 @@ img {
 }
 
 .item {
-  margin: 2.5rem 0;
+  padding: 2.5rem 0;
+}
+@media screen and (min-width: 75em) {
+  .item {
+    padding: 2.5rem;
+  }
 }
 .item__title {
   font-size: 1.375rem;
@@ -198,9 +203,27 @@ img {
 }
 
 @media screen and (min-width: 75em) {
+  .workflow__list {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 75em) {
   .workflow__list .item__description {
     margin: 0 auto;
   }
+}
+
+/* HACKING */
+/** 
+* 1. For an unknown reason, the first workflow child
+* does not have align correctly
+*/
+.workflow__item:first-child .item__icon {
+  margin: 1.5625rem 0;
+  /* 1 */
 }
 
 .companies {
@@ -215,6 +238,16 @@ img {
   display: grid;
   justify-content: center;
   gap: 3.75rem;
+}
+@supports (grid-gap: 3.75rem) {
+  .companies .container {
+    grid-gap: 3.75rem;
+  }
+}
+@supports not ((grid-gap: 3.75rem) and (gap: 3.75rem)) {
+  .companies .container > *:not(:last-child) {
+    margin-bottom: 3.75rem;
+  }
 }
 
 .footer {
