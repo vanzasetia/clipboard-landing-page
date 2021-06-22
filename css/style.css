@@ -39,6 +39,11 @@ p {
   color: #9fabb2;
   font-size: 0.96875rem;
 }
+@media screen and (min-width: 50em) {
+  p {
+    font-size: 1.125rem;
+  }
+}
 
 ul {
   list-style: none;
@@ -76,8 +81,8 @@ img {
 }
 
 .btn {
-  display: inline-block;
-  margin: 0.625rem 0;
+  display: block;
+  margin: 0.625rem auto;
   border: none;
   border-bottom: 0.1875rem solid;
   border-radius: 5em;
@@ -90,10 +95,21 @@ img {
   font-weight: 600;
   transition: all 250ms ease-in-out;
 }
+@media screen and (min-width: 50em) {
+  .btn {
+    display: inline-block;
+    max-width: 12.5rem;
+  }
+}
 .btn--ios {
   border-bottom-color: #1e9583;
   box-shadow: 0 0.625rem 1.25rem rgba(38, 186, 164, 0.25);
   background-color: #26baa4;
+}
+@media screen and (min-width: 50em) {
+  .btn--ios {
+    margin-right: 1.125rem;
+  }
 }
 .btn--mac {
   border-bottom-color: #4e5ccc;
@@ -121,8 +137,22 @@ img {
   padding-top: 7.5rem;
   text-align: center;
 }
+@media screen and (min-width: 50em) {
+  .header {
+    background-image: url("../images/bg-header-desktop.png");
+  }
+}
 .header__title {
   font-size: 1.875rem;
+}
+@media screen and (min-width: 50em) {
+  .header__title {
+    font-size: 2.8125rem;
+  }
+}
+.header__description {
+  margin: 0 auto;
+  max-width: 40.625rem;
 }
 
 .companies {

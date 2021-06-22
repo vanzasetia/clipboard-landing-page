@@ -1,8 +1,8 @@
 @use '../abstracts' as *;
 
 .btn {
-  display: inline-block;
-  margin: rem(10) 0;
+  display: block;
+  margin: rem(10) auto;
   border: none;
   border-bottom: rem(3) solid;
   border-radius: 5em;
@@ -15,10 +15,19 @@
   font-weight: 600;
   transition: all 250ms ease-in-out;
   
+  @include breakpoint-up('medium') {
+    display: inline-block;
+    max-width: rem(200);
+  }
+  
   &--ios {
     border-bottom-color: shade($strong-cyan, 20%);
     box-shadow: 0 rem(10) rem(20) rgba($strong-cyan, 0.25);
     background-color: $strong-cyan;
+    
+    @include breakpoint-up('medium') {
+      margin-right: rem(18);
+    }
   }
   
   &--mac {

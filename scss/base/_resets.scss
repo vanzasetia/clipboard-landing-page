@@ -40,6 +40,10 @@ p {
   margin: rem(12) 0;
   color: $grayish-blue;
   font-size: rem(15.5);
+  
+  @include breakpoint-up('medium') {
+    font-size: rem(18);
+  }
 }
 
 ul {
