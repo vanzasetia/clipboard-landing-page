@@ -8,7 +8,7 @@ computer or laptop ☺️.
 
 ## Feedback and Live Review
 
-Feel free to give [feedback]() to me on Frontend Mentor and here is
+Feel free to give [feedback](https://www.frontendmentor.io/solutions/clipboard-landing-page-html5-css3-sass-DvR33bbjr) to me on Frontend Mentor and here is
 [live review](https://clipboard-landing-page-vs.netlify.app/)
 
 ## Tools
