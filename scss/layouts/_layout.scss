@@ -95,6 +95,21 @@
       margin-bottom: rem(60);
     }
   }
+  
+  @include breakpoint-up('medium') {
+    grid-template-columns: repeat(auto-fit, minmax(rem(165), 1fr));
+    
+    @supports not (display: grid) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      
+      & > *:not(:last-child) {
+        margin-bottom: 0;
+        margin-right: rem(60);
+      }
+    }
+  }
 }
 
 
