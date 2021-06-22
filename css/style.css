@@ -298,6 +298,12 @@ img {
 .footer__item {
   margin: 1rem 0;
 }
+@media screen and (min-width: 75em) {
+  .footer__item {
+    line-height: 2;
+    margin: 0;
+  }
+}
 .footer__link {
   color: #4c545d;
 }
@@ -334,17 +340,8 @@ img {
 
 @media screen and (min-width: 75em) {
   .footer__list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    column-count: 3;
     text-align: left;
-  }
-  @supports not (display: grid) {
-    .footer__list {
-      display: flex;
-    }
-    .footer__list > *:not(:last-child) {
-      margin-right: 1.875rem;
-    }
   }
 }
 

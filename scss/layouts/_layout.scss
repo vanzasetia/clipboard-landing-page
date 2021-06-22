@@ -140,6 +140,11 @@
   
   &__item {
     margin: rem(16) 0;
+    
+    @include breakpoint-up('large') {
+      line-height: 2;
+      margin: 0;
+    }
   }
   
   &__link {
@@ -181,17 +186,8 @@
 .footer__list {
   
   @include breakpoint-up('large') {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    column-count: 3;
     text-align: left;
-    
-    @supports not (display: grid) {
-      display: flex;
-      
-      & > *:not(:last-child) {
-        margin-right: rem(30);
-      }
-    }
   }
 }
 
