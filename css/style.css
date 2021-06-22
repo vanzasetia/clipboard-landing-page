@@ -129,7 +129,8 @@ img {
   text-align: center;
 }
 .companies__logo {
-  margin: 0 auto;
+  display: block;
+  margin: 0.625rem auto;
 }
 
 .companies .container {
@@ -139,7 +140,7 @@ img {
 }
 
 .footer {
-  margin-top: 3.75rem;
+  margin-top: 5rem;
   background-color: #F5F6F8;
   padding: 3.75rem 0;
   text-align: center;
