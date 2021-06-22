@@ -26,6 +26,33 @@
   }
 }
 
+/// KEEP TRACK ///
+.keep-track__features {
+  @include breakpoint-up('large') {
+    display: flex;
+  }
+}
+
+.keep-track__image {
+  @include breakpoint-up('large') {
+    transform: translateX(-5vw);
+  }
+}
+
+.keep-track__list {
+  @include breakpoint-up('large') {
+    margin-left: rem(30);
+    text-align: left;
+  }
+}
+
+/// WORKFLOW ///
+.workflow__list .item__description {
+  @include breakpoint-up('large') {
+    margin: 0 auto;
+  }
+}
+
 /// COMPANIES ///
 .companies {
   text-align: center;

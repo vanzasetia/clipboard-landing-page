@@ -66,6 +66,16 @@ img {
   padding: 0 1.875rem;
 }
 
+@media screen and (min-width: 50em) {
+  .section__title {
+    font-size: 2.25rem;
+  }
+}
+.section__description {
+  margin: 0 auto;
+  max-width: 43.75rem;
+}
+
 .content-wrapper {
   padding: 3rem 0;
 }
@@ -76,13 +86,26 @@ img {
 .item__title {
   font-size: 1.375rem;
 }
+@media screen and (min-width: 50em) {
+  .item__description {
+    margin: 0 auto;
+    max-width: 37.5rem;
+  }
+}
+@media screen and (min-width: 75em) {
+  .item__description {
+    margin: 0;
+    max-width: 20.9375rem;
+    font-size: 1rem;
+  }
+}
 .item__icon {
   margin: 1.875rem 0;
 }
 
 .btn {
   display: block;
-  margin: 0.625rem auto;
+  margin: 1.125rem auto;
   border: none;
   border-bottom: 0.1875rem solid;
   border-radius: 5em;
@@ -153,6 +176,31 @@ img {
 .header__description {
   margin: 0 auto;
   max-width: 40.625rem;
+}
+
+@media screen and (min-width: 75em) {
+  .keep-track__features {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 75em) {
+  .keep-track__image {
+    transform: translateX(-5vw);
+  }
+}
+
+@media screen and (min-width: 75em) {
+  .keep-track__list {
+    margin-left: 1.875rem;
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 75em) {
+  .workflow__list .item__description {
+    margin: 0 auto;
+  }
 }
 
 .companies {
