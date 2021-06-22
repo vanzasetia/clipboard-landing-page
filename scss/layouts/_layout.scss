@@ -71,8 +71,7 @@
 
 /* HACKING */
 /** 
-* 1. For an unknown reason, the first workflow child
-* does not have align correctly
+* 1. For an unknown reason, the first workflow child does not align correctly
 */
 .workflow__item:first-child .item__icon {
   margin: rem(25) 0; /* 1 */
@@ -91,17 +90,17 @@
 .companies .container {
   display: grid;
   justify-content: center;
-  gap: rem(60);
+  gap: rem(30);
   margin: 0 auto;
   max-width: rem(1278);
   
-  @supports (grid-gap: rem(60)) {
-    grid-gap: rem(60);
+  @supports (grid-gap: rem(30)) and (not (gap: rem(30))) {
+    grid-gap: rem(30);
   }
   
-  @supports not ((grid-gap: rem(60)) and (gap: rem(60))) {
+  @supports not ((grid-gap: rem(30)) and (gap: rem(30))) {
     & > *:not(:last-child) {
-      margin-bottom: rem(60);
+      margin-bottom: rem(30);
     }
   }
   
@@ -115,7 +114,7 @@
       
       & > *:not(:last-child) {
         margin-bottom: 0;
-        margin-right: rem(60);
+        margin-right: rem(30);
       }
     }
   }

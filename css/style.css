@@ -230,8 +230,7 @@ img {
 
 /* HACKING */
 /** 
-* 1. For an unknown reason, the first workflow child
-* does not have align correctly
+* 1. For an unknown reason, the first workflow child does not align correctly
 */
 .workflow__item:first-child .item__icon {
   margin: 1.5625rem 0;
@@ -249,18 +248,18 @@ img {
 .companies .container {
   display: grid;
   justify-content: center;
-  gap: 3.75rem;
+  gap: 1.875rem;
   margin: 0 auto;
   max-width: 79.875rem;
 }
-@supports (grid-gap: 3.75rem) {
+@supports (grid-gap: 1.875rem) and (not (gap: 1.875rem)) {
   .companies .container {
-    grid-gap: 3.75rem;
+    grid-gap: 1.875rem;
   }
 }
-@supports not ((grid-gap: 3.75rem) and (gap: 3.75rem)) {
+@supports not ((grid-gap: 1.875rem) and (gap: 1.875rem)) {
   .companies .container > *:not(:last-child) {
-    margin-bottom: 3.75rem;
+    margin-bottom: 1.875rem;
   }
 }
 @media screen and (min-width: 50em) {
@@ -275,7 +274,7 @@ img {
     }
     .companies .container > *:not(:last-child) {
       margin-bottom: 0;
-      margin-right: 3.75rem;
+      margin-right: 1.875rem;
     }
   }
 }
